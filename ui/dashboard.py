@@ -362,7 +362,7 @@ with col_right:
         with b2:
             try:
                 tmp_path = os.path.join(tempfile.gettempdir(), f"RCA_{active['id']}.pdf")
-                generate_rca_pdf(report, tmp_path)
+                generate_rca_pdf(report, tmp_path)  # may raise on special chars
                 with open(tmp_path, "rb") as f:
                     st.download_button(
                         "📄 Export RCA (PDF)",
@@ -372,7 +372,7 @@ with col_right:
                         use_container_width=True,
                     )
             except Exception as e:
-                st.error(f"PDF export error: {e}")
+                st.warning("PDF export unavailable - use Markdown export instead")
 
         with b3:
             if st.button("🔄 Re-run agent", use_container_width=True):
