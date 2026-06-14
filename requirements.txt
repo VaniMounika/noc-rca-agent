@@ -1,0 +1,11 @@
+streamlit>=1.35.0
+pandas>=2.0.0
+python-dotenv>=1.0.0
+fpdf2>=2.7.0
+openai>=1.30.0
+azure-search-documents>=11.4.0
+azure-core>=1.30.0
+azure-ai-projects>=1.0.0b5
+azure-ai-inference>=1.0.0b4
+azure-identity>=1.16.0
+pydantic>=2.0.0
